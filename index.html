@@ -1,0 +1,34 @@
+<html lang="en">
+    <head>
+<!--jquery js-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- leaflet files -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<style>
+    #myMap {
+        width: 800px;
+        max-width: 100%;
+        height: 450px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+</style>
+    </head>
+    <body>
+<div id="myMap">If you can read this, either an error has occurred, or you're getting cute with the developer tools of your browser.</div>
+<script >
+    // Create map (map1) inside div with #myMap ID; set the view
+    var map1 = L.map('myMap').setView([52.19166,-1.70734], 20);
+
+    // Add tileLayer to map1
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map1);
+</script>
+    </body>
+</html>
